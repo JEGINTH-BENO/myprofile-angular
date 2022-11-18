@@ -1,0 +1,12 @@
+<input type="type" [(ngModel)]="fruit">
+
+<button (click)="increase()" class="btn btn-primary">add product</button>
+
+<ul>
+  <li *ngFor="let fruits of fruitList">
+    {{fruits}}
+
+  </li>
+
+
+</ul>

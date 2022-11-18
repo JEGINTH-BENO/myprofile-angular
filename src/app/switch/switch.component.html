@@ -1,0 +1,51 @@
+<button class="btn btn-primary p-2" (click)="wish='bike'" [ngClass]="{'active':wish =='bike'}">bike</button>
+<button class="btn btn-danger p-2" (click)="wish='movie'" [ngClass]="{'active':wish =='movie'}">movie</button>
+<button class="btn btn-warning p-2" (click)="wish='actors'" [ngClass]="{'active':wish =='actors'}">actors</button>
+
+<div [ngSwitch]="wish">
+    <div *ngSwitchCase="'bike'">
+        <h3>honda</h3>
+        <h3>yamaha</h3>
+        <h3>tvs</h3>
+        <h3>pulsar</h3>
+    </div>
+    <div *ngSwitchCase="'movie'">
+        <h3>jilla</h3>
+        <h3>thupaki</h3>
+        <h3>mersal</h3>
+        <h3>beast</h3>
+    </div>
+    <div *ngSwitchCase="'actors'">
+        <h3>vijay</h3>
+        <h3>suriya</h3>
+        <h3>ajith</h3>
+        <h3>vikram</h3>
+    </div>
+</div>
+
+
+<select (change)="value($event)">
+    <option value="home">home</option>
+    <option value="about" >about me</option>
+    <option value="contact">contact me</option>
+</select>
+
+<div [ngSwitch]="contact">
+    <div *ngSwitchCase="'home'">
+        <h1 class="me">this is me</h1>
+    </div>
+    <div *ngSwitchCase="'about'">
+        <h1 class="call">about me</h1>
+    </div>
+    <div *ngSwitchCase="'contact'">
+        <h1 class="connect">contact me through email</h1>
+    </div>
+    
+</div>
+
+
+
+
+
+
+

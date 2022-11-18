@@ -1,0 +1,20 @@
+<h1>ADD TO CART</h1>
+
+Cart items: {{products}}<br>
+
+<p *ngIf=" products==5 else removecart">
+    you have reached maximum cart limit
+</p>
+
+<ng-template #removecart>
+    <p *ngIf="products==0">atleast add one products</p>
+</ng-template>
+
+
+
+
+
+
+<button (click)="AddProducts()" [disabled]="products==5">add to cart</button><br>
+<button (click)="RemoveProducts()"[disabled]="products==0">remove from cart</button>
+
